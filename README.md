@@ -9,7 +9,7 @@ Behavioral health checks for HuggingFace / TRL fine-tuning.
 
 ---
 
-The idea behind this project occurred to me when fine-tuning a model on another languages, the loss looked fine the whole run, but when training finished, the model was outputting a completly different language.
+The idea behind this project occurred to me when fine-tuning a model on another language, the loss looked fine the whole run, but when training finished, the model was outputting a completly different language.
 
 Loss going down doesn't mean the model is behaving correctly. `trainsafe` hooks into your eval loop, generates a handful of outputs at each checkpoint, and checks whether they're still in the right language, format, and length. If something looks wrong, it warns you. If it looks bad enough, it stops training and points you at the last healthy checkpoint.
 
