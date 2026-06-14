@@ -1,5 +1,10 @@
 # trainsafe
 
+[![PyPI](https://img.shields.io/pypi/v/trainsafe)](https://pypi.org/project/trainsafe/)
+[![Python](https://img.shields.io/pypi/pyversions/trainsafe)](https://pypi.org/project/trainsafe/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/AmmarHassona/trainsafe/actions/workflows/ci.yml/badge.svg)](https://github.com/AmmarHassona/trainsafe/actions/workflows/ci.yml)
+
 Behavioral health checks for HuggingFace / TRL fine-tuning.
 
 ---
