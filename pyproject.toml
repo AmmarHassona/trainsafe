@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trainsafe"
+version = "0.1.0"
+description = "Behavioral health checks for HuggingFace/TRL fine-tuning runs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Ammar Hassona", email = "ammarhassona15@gmail.com"},
+]
+keywords = ["llm", "fine-tuning", "training", "monitoring", "transformers", "trl"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "transformers>=4.40.0",
+    "accelerate>=1.1.0",
+    "torch",
+    "pyyaml>=6.0",
+    "colorama>=0.4.6",
+]
+
+[project.optional-dependencies]
+language = ["langdetect>=1.0.9"]
+wandb = ["wandb>=0.16.0"]
+trl = ["trl>=0.8.0"]
+all = ["trainsafe[language,wandb,trl]"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "trl>=0.8.0",
+    "datasets>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ammarhassona/trainsafe"
+Repository = "https://github.com/ammarhassona/trainsafe"
+Issues = "https://github.com/ammarhassona/trainsafe/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

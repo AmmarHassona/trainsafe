@@ -1,0 +1,20 @@
+language: ar
+task: chat
+probes:
+  - prompt: "مرحبا، كيف يمكنني مساعدتك؟"
+    checks:
+      - language: ar
+      - min_length: 5
+      - not_contains: ["<|im_start|>", "###", "<|endoftext|>"]
+
+  - prompt: "اشرح لي ما هو التعلم الآلي"
+    checks:
+      - language: ar
+      - min_length: 20
+      - coherent: true
+
+  - prompt: "ما هي عاصمة المملكة العربية السعودية؟"
+    checks:
+      - language: ar
+      - contains: ["الرياض", "رياض"]
+      - max_length: 100
