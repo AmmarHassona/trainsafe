@@ -129,7 +129,7 @@ For large models, set `max_new_tokens` to match your actual task length (e.g. 32
 
 ## Limitations
 
-Tested on single-GPU and CPU setups. **Distributed training (DeepSpeed, FSDP, multi-GPU via `device_map="auto"`)** is untested and may not work correctly, the callback receives a wrapped model in those cases, and `model.device` may not behave as expected.
+Tested on CPU and single NVIDIA GPU (T4). **Distributed training (DeepSpeed, FSDP, multi-GPU via `device_map="auto"`)** is untested and may not work correctly, the callback receives a wrapped model in those cases and `model.device` may not behave as expected.
 
 ## W&B metrics
 
